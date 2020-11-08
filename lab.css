@@ -1,17 +1,18 @@
 /* Basic configuration */
 :root {
   /* Layout */
-  --width-container: 900px;
+  --width-container: 1024px;
+  --height-container: 720px;
   --width-min-container: 320px;
   --height-min-header-footer: 8vh;
   --padding-internal: 24px;
   --border-radius-container: 5px;
   --border-radius-content: 4px;
   /* Typography */
-  --font-family: "Arial", sans-serif;
-  --font-family-mono: Droid Mono, Menlo, Consolas, monospace;
-  --font-size: 18px;
-  --line-height: 1.45;
+  --font-family: "microsoft", sans-serif; 
+  --font-family-mono: sans-serif, Droid Mono, Menlo, Consolas, monospace;
+  --font-size: 24px;
+  --line-height: 1;
   /* (line height is specified in em so that it adapts to varying font sizes) */
   --paragraph-margin-vertical: var(--font-size);
   /* Colors */
@@ -45,14 +46,30 @@ body {
   background: var(--color-background)
 }
 
+#prescreen {
+  margin-top: 25%;
+  left: 50% !important;
+  top: 50% !important;
+}
+
 #participant-form {
   background-color: white;
   color: black;
   padding: 5pt 10pt 5pt 10pt;
   position: absolute;
    justify-content: center;
-  top: 25%;
-  left: 25%;
+  top: 45%;
+  left: 20%;
+}
+
+#participant-form2 {
+  background-color: white;
+  color: black;
+  padding: 5pt 10pt 5pt 10pt;
+  position: absolute;
+   justify-content: center;
+  top: 45%;
+  left: 20%;
 }
 
 #instructions {
@@ -60,7 +77,7 @@ body {
   position: absolute;
    text-align: center;
   top: 25%;
-  left: 25%;
+  left: 20%;
 }
 
 #instructions2 {
@@ -70,9 +87,27 @@ body {
 
 }
 
-#point {
+#furtherInstructions {
+  position: absolute !important;
+  top: 30% !important;
+  /* left: 25% !important; */
+}
+
+#lastInstruction {
+  position: absolute;
+  top: 90%;
+  left: 25%;
+}
+
+/* #asterisk{
+  top: 5%;
+  left: 5%;
+} */
+
+.point {
   text-align: center;
   vertical-align: middle;
+  font-size: 28px;
 }
 
 #pointCircle {
@@ -82,6 +117,7 @@ body {
   border: solid 1px white;
   text-align: center;
   vertical-align: middle;
+  font-size: 28px;
 }
 
 
@@ -103,23 +139,30 @@ body {
   margin: -2em;
   width:50%;
   height:50%;
+  padding: 10%;
 }
 .circle-container img { 
   display: block; 
   width: 100%; 
 }
-.deg0 { transform: translate(6em); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(45deg) translate(6em) rotate(-45deg); }
-.deg80 { transform: rotate(80deg) translate(6em) rotate(-80deg); }
-.deg120 { transform: rotate(120deg) translate(6em) rotate(-120deg); }
-.deg160 { transform: rotate(160deg) translate(6em) rotate(-160deg); }
-.deg200 { transform: rotate(200deg) translate(6em) rotate(-200deg); }
-.deg240 { transform: rotate(240deg) translate(6em) rotate(-240deg); }
-.deg280 { transform: rotate(280deg) translate(6em) rotate(-280deg); }
-.deg320 { transform: rotate(320deg) translate(6em) rotate(-320deg); }
+.deg0 { transform: rotate(10deg) translate(4em) rotate(-10deg); } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(50deg) translate(4em) rotate(-50deg); }
+.deg80 { transform: rotate(90deg) translate(4em) rotate(-90deg); }
+.deg120 { transform: rotate(130deg) translate(4em) rotate(-130deg); }
+.deg160 { transform: rotate(170deg) translate(4em) rotate(-170deg); }
+.deg200 { transform: rotate(210deg) translate(4em) rotate(-210deg); }
+.deg240 { transform: rotate(250deg) translate(4em) rotate(-250deg); }
+.deg280 { transform: rotate(290deg) translate(4em) rotate(-290deg); }
+.deg320 { transform: rotate(330deg) translate(4em) rotate(-330deg); }
 
 #demo {
   color: white;
+}
+
+#alphabet {
+  position: absolute;
+  top: 85%;
+  left: 35%;
 }
 
 
@@ -149,10 +192,10 @@ body {
   box-shadow: 0 0 5px rgba(140, 140, 140, 0.25);
 }
 
-footer, main {
+/* footer, main { */
   /* padding: 24px; */
   /* padding: var(--padding-internal); */
-}
+/* } */
 /* Individual parts: Height, borders and background */
 footer {
   min-height: 8vh;
@@ -241,11 +284,11 @@ footer {
 
 /* Typography */
 :root {
-  font-family: "Arial", sans-serif;
+  --font-family: "microsoft", sans-serif;
   font-family: var(--font-family);
   font-size: 18px;
   font-size: var(--font-size);
-  line-height: 1.45;
+  line-height: 1;
   line-height: var(--line-height);
 }
  footer, main {
@@ -255,7 +298,7 @@ footer {
   /* text-align: center; */
 }
 h1, h2, h3 {
-  line-height: 1.45;
+  line-height: 1;
   line-height: var(--line-height);
 }
 hr {
@@ -466,10 +509,10 @@ code {
 
 /* Form elements */
 input, select, button, textarea {
-  font-family: "Arial", sans-serif;
+  --font-family: "microsoft", sans-serif;
   font-family: var(--font-family);
   font-size: 0.9rem;
-  line-height: 1.45;
+  line-height: 1;
   line-height: var(--line-height);
   border: 2px solid #e5e5e5;
   border: 2px solid var(--color-border);
